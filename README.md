@@ -86,7 +86,6 @@ ZPRouter的页面规则制定，不是传统的由代码进行注册，而是交
  schemename://module_a/detail 业务线A的详情页，拦截处理类=DetailHold  
 ```
 main 和 module_a 代表不同的业务线模块，如果不需要区分业务线，可以统一命名。  
-路由配置表推荐使用plist文件进行存储配置，如果考虑到安全性和需要动态更新跳转规则，可以由接口下发。  
   
     
     
@@ -233,5 +232,10 @@ NSDictionary *options = @{kURLRouteOpenAnimatedTransition:@(URLRouteOpenAnimated
 // 跳转到H5页面，也可以配置统一的规则进行跳转，这种方式可以添加更多的数据进行页面配置。
 [self openRouteURLString:@"demo://mainClient/web?data={\"url\":\"https://www.baidu.com\",\"title\":\"web标题\"}" parameter:nil options:nil];
 ```
+
+
+### 安全性和动态更新规则
+路由配置表推荐使用本地plist文件进行存储配置，如果考虑到安全性或需要动态更新跳转规则，可以由接口下发数据。  
+接口获取的配置数据需要在app启动时去获取，避免外部唤起时配置数据未更新完成无法跳转，具体需要接入方去实现请求和跳转的时机。
 
 
