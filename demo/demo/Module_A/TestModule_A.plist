@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>http</key>
+	<dict>
+		<key>_hold</key>
+		<dict>
+			<key>_class</key>
+			<string>TestWebHold</string>
+		</dict>
+	</dict>
+	<key>https</key>
+	<dict>
+		<key>_hold</key>
+		<dict>
+			<key>_class</key>
+			<string>TestWebHold</string>
+		</dict>
+	</dict>
+	<key>demo</key>
+	<dict>
+		<key>mainClient</key>
+		<dict>
+			<key>web</key>
+			<dict>
+				<key>_hold</key>
+				<dict>
+					<key>_class</key>
+					<string>TestWebKeyHold</string>
+				</dict>
+				<key>_description</key>
+				<string>跳转到公共的web页</string>
+				<key>_extend</key>
+				<string>扩展参数无</string>
+			</dict>
+		</dict>
+		<key>module_a</key>
+		<dict>
+			<key>home</key>
+			<dict>
+				<key>_extend</key>
+				<string></string>
+				<key>_class</key>
+				<string>TestModuleAControllerOne</string>
+				<key>_description</key>
+				<string>模块A的 One 页面</string>
+			</dict>
+			<key>pageTwo</key>
+			<dict>
+				<key>_class</key>
+				<string>TestModuleAControllerTwo</string>
+				<key>_description</key>
+				<string>模块A的 Two页面</string>
+			</dict>
+			<key>pageThree</key>
+			<dict>
+				<key>_class</key>
+				<string>TestModuleAControllerThree</string>
+				<key>_description</key>
+				<string>模块A的 Three页面</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

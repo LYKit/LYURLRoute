@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LoginHold</key>
+	<dict>
+		<key>_description</key>
+		<string>未登录拦截</string>
+		<key>_hold</key>
+		<dict>
+			<key>_class</key>
+			<string>ZPLoginHold</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

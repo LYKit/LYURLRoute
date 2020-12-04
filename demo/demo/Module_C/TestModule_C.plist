@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>demo</key>
+	<dict>
+		<key>module_c</key>
+		<dict>
+			<key>home</key>
+			<dict>
+				<key>_class</key>
+				<string>TestModuleCControllerOne</string>
+				<key>_description</key>
+				<string>模块C的xx页面</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
