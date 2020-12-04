@@ -187,7 +187,7 @@ NSString *url = @"demo://module_a/home?data={\"name\":\"张三\",\"age\":\"20\"}
 **跳转完成回调**
 ```js
 [self openRouteURLString:@"demo://module_a/pageTwo" parameter:nil options:nil completion:^{
-        NSLog(@"跳转完成回调");
+    NSLog(@"跳转完成回调");
 } callParams:nil];
 ```
 
@@ -234,7 +234,7 @@ NSDictionary *options = @{kURLRouteOpenAnimatedTransition:@(URLRouteOpenAnimated
 ```
 
 
-** 未登录拦截，登录后继续跳转 **
+**未登录拦截，登录后继续跳转**
 ```js
 // app在登录成功时调用此函数，
 + (void)sendLoginStatus:(BOOL)isLogin;
