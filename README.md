@@ -157,13 +157,13 @@ main 和 module_a 代表不同的业务线模块，如果不需要区分业务�
 NSString *url = @"demo://module_a/home?data={\"name\":\"张三\",\"age\":\"20\"}";
 [self openRouteURLString:url parameter:nil options:nil];
 
-// 目的页Controller接收数据
+// 1、目的页Controller接收数据
 - (void)routeWillPushControllerWithResult:(ZPRouteResultModel *)result {
     NSDictionary *dataParams = result.data;
     NSLog(@"姓名：%@  年龄：%@",dataParams[@"name"],dataParams[@"age"]);
 }
 
-// 如果跳转被拦截，则由拦截类接收数据
+// 2、如果跳转被拦截，则由拦截类接收数据
 // return yes-业务能正常跳转， no-业务不能正常跳转。 用于收集跳转失败的数据。
 - (BOOL)holdWithParameters:(ZPRouteResultModel *)result
 {
