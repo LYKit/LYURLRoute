@@ -146,3 +146,57 @@ main 和 module_a 代表不同的业务线模块，如果不需要区分业务�
 ```
 
 
+### 使用方法
+**普通跳转**
+```js
+[self openRouteURLString:@"demo://module_a/home" parameter:nil options:nil];
+```
+
+**url含有参数跳转**
+```js
+// 发起跳转页
+NSString *url = @"demo://module_a/home?data={\"name\":\"张三\",\"age\":\"20\"}";
+[self openRouteURLString:url parameter:nil options:nil];
+
+// 目的页Controller接收数据
+- (void)routeWillPushControllerWithResult:(ZPRouteResultModel *)result {
+    NSDictionary *dataParams = result.data;
+    NSLog(@"name：%@  age：%@",dataParams[@"name"],dataParams[@"age"]);
+}
+
+// 如果跳转被拦截，则由拦截类接收数据
+// return yes-业务能正常跳转， no-业务不能正常跳转。 用于收集跳转失败的数据。
+- (BOOL)holdWithParameters:(ZPRouteResultModel *)result
+{
+    NSDictionary *data = result.data;
+    if ([data[@"age"] intValue] < 18) {
+        // 18岁以下禁入
+        // push error page
+        return NO;
+    }
+    // 18岁以上 go
+    // push right page
+    return YES;
+}
+```
+
+**跳转含有自定义参数**
+```js
+
+```
+
+**跳转完成回调**
+```js
+
+```
+
+**跳转回传数据**
+```js
+
+```
+
+**普通跳转**
+```js
+
+```
+
