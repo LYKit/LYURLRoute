@@ -128,7 +128,7 @@ main 和 module_a 代表不同的业务线模块，如果不需要区分业务�
 // 未登录下是否允许跳转，默认YES， 设置NO后需要等待登录成功后自动跳转
 + (BOOL)routeAllowJumpNotLogin;
 
-// URL 即将跳转
+// URL即将跳转
 + (void)routeWillJump:(NSString *)url scheme:(ZPRouteScheme *)scheme customInfo:(NSDictionary *)customInfo;
 
 // URL跳转失败
@@ -160,7 +160,7 @@ NSString *url = @"demo://module_a/home?data={\"name\":\"张三\",\"age\":\"20\"}
 // 目的页Controller接收数据
 - (void)routeWillPushControllerWithResult:(ZPRouteResultModel *)result {
     NSDictionary *dataParams = result.data;
-    NSLog(@"name：%@  age：%@",dataParams[@"name"],dataParams[@"age"]);
+    NSLog(@"姓名：%@  年龄：%@",dataParams[@"name"],dataParams[@"age"]);
 }
 
 // 如果跳转被拦截，则由拦截类接收数据
