@@ -210,8 +210,28 @@ NSString *url = @"demo://module_a/home?data={\"name\":\"张三\",\"age\":\"20\"}
 }
 ```
 
-**普通跳转**
+**Present跳转**
 ```js
-
+// kURLRouteOpenAnimatedTransition 跳转类型push还是present
+// kURLRouteOpenAnimated 跳转是否需要动画
+NSDictionary *options = @{kURLRouteOpenAnimatedTransition:@(URLRouteOpenAnimatedPresent),
+                          kURLRouteOpenAnimated:@(YES)
+                         };
+[self openRouteURLString:@"demo://module_a/pageThree" parameter:nil options:options];
 ```
+
+
+**跳转普通的H5页面**
+```js
+// 需要对https或者http配置响应的scheme跳转规则,具体参考demo
+[self openRouteURLString:@"https://www.baidu.com" parameter:nil options:nil];
+```
+
+
+**复杂情况跳转到H5页面**
+```js
+// 跳转到H5页面，也可以配置统一的规则进行跳转，这种方式可以添加更多的数据进行页面配置。
+[self openRouteURLString:@"demo://mainClient/web?data={\"url\":\"https://www.baidu.com\",\"title\":\"web标题\"}" parameter:nil options:nil];
+```
+
 
