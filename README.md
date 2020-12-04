@@ -234,6 +234,12 @@ NSDictionary *options = @{kURLRouteOpenAnimatedTransition:@(URLRouteOpenAnimated
 ```
 
 
+** 未登录拦截，登录后继续跳转 **
+```js
+// app在登录成功时调用此函数，
++ (void)sendLoginStatus:(BOOL)isLogin;
+```
+
 ### 安全性和动态更新规则
 路由配置表推荐使用本地plist文件进行存储配置，如果考虑到安全性或需要动态更新跳转规则，可以由接口下发数据。  
 接口获取的配置数据需要在app启动时去获取，避免外部唤起时配置数据未更新完成无法跳转，具体需要接入方去实现请求和跳转的时机。
