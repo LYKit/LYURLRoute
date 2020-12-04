@@ -182,17 +182,32 @@ NSString *url = @"demo://module_a/home?data={\"name\":\"张三\",\"age\":\"20\"}
 
 **跳转含有自定义参数**
 ```js
-
+[self openRouteURLString:@"demo://module_a/home" parameter:@{@"customInfo":@"自定义数据"} options:nil];
 ```
 
 **跳转完成回调**
 ```js
-
+[self openRouteURLString:@"demo://module_a/pageTwo" parameter:nil options:nil completion:^{
+        NSLog(@"跳转完成回调");
+} callParams:nil];
 ```
 
 **跳转回传数据**
 ```js
+// 发起跳转页接收回传数据
+[self openRouteURLString:@"demo://module_a/pageTwo" parameter:nil options:nil completion:nil callParams:^(NSDictionary * _Nonnull params) {
+    NSLog(@"------收到回传参数");
+    if (params[@"vip"] && params[@"age"] > 18) {
+        // 会员18岁了，可以开放功能
+    }
+}];
 
+// 目的页回传数据
+- (void)routeWillPushControllerWithResult:(ZPRouteResultModel *)result {
+    if (self.callParams) {
+        self.callParams(@{@"vip":@"yes",@"age":@"20"});
+    }
+}
 ```
 
 **普通跳转**
