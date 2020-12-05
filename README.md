@@ -35,9 +35,9 @@ bangjob://zcmclient/resumeDetailView?rf=1&data={
 		"userid": "EP:10",
 		"isdate": 0,
 		"phone": "xxx",
-		"url": "https://hrgnode.58.com/zcm/resume58?resumeid=3_neyanEyanErQ_erQ_EyXlEDkTvHsnGdpne0knpsVlEnsnErsnisfnGyXTm**",
-		"sid": "890b3b0e7119532da9ee4b9056d4dd801557821880200",
-		"resumeid": "3_neyanEyanErQ_erQ_EyXlEDkTvHsnGdpne0knpsVlEnsnErsnisfnGyXTm**",
+		"url": "https://www.baidu.com",
+		"sid": "123",
+		"resumeid": "123**",
 		"phoneProtected": 1
 	}
 }
