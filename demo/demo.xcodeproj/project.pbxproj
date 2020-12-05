@@ -55,6 +55,7 @@
 		C17E30C425751DD100A2A409 /* TestModuleBControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E30C325751DD100A2A409 /* TestModuleBControllerTwo.m */; };
 		C17E30CA25751DF200A2A409 /* TestOneHold.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E30C925751DF200A2A409 /* TestOneHold.m */; };
 		C17E30D325751E2B00A2A409 /* TestModuleCControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = C17E30D225751E2B00A2A409 /* TestModuleCControllerOne.m */; };
+		C1CFDA8F257B2A170059D3FF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CFDA8E257B2A170059D3FF /* SceneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,8 @@
 		C17E30C925751DF200A2A409 /* TestOneHold.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneHold.m; sourceTree = "<group>"; };
 		C17E30D125751E2B00A2A409 /* TestModuleCControllerOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModuleCControllerOne.h; sourceTree = "<group>"; };
 		C17E30D225751E2B00A2A409 /* TestModuleCControllerOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModuleCControllerOne.m; sourceTree = "<group>"; };
+		C1CFDA8D257B2A170059D3FF /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C1CFDA8E257B2A170059D3FF /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +297,8 @@
 				C120FBA42579D8C50050E720 /* URLRoute */,
 				C17E2F2E2574EB2200A2A409 /* AppDelegate.h */,
 				C17E2F2F2574EB2200A2A409 /* AppDelegate.m */,
+				C1CFDA8D257B2A170059D3FF /* SceneDelegate.h */,
+				C1CFDA8E257B2A170059D3FF /* SceneDelegate.m */,
 				C17E2F342574EB2200A2A409 /* ViewController.h */,
 				C17E2F352574EB2200A2A409 /* ViewController.m */,
 				C17E30782575157600A2A409 /* TestRouteConfig.h */,
@@ -537,6 +542,7 @@
 				C17E2F412574EB2500A2A409 /* main.m in Sources */,
 				C120FBE62579D8C60050E720 /* ZPURLRoute.m in Sources */,
 				C120FBED2579D8C60050E720 /* ZPURLRouteConfig.m in Sources */,
+				C1CFDA8F257B2A170059D3FF /* SceneDelegate.m in Sources */,
 				C120FBF22579D8C60050E720 /* ZPRouteResultModel.m in Sources */,
 				C120FB8E2578CCC00050E720 /* TestWebHold.m in Sources */,
 				C120FBDD2579D8C60050E720 /* ZPURLBridge.m in Sources */,

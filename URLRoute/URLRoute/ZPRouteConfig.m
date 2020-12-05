@@ -8,6 +8,7 @@
 
 #import "ZPRouteConfig.h"
 #import "ZPURLRouteConfig.h"
+#import "ZPLoginHold.h"
 
 NSString * const kRouteSchemeClient     = @"scheme";       //默认跳转native页面
 NSString * const kRouteSchemeExternal   = @"external";      //跳转外部
@@ -124,6 +125,11 @@ static NSString *_routeURLDataKey = nil;
     [ZPURLRouteConfig addRouteDictionary:routeDictionary];
 }
 
++ (void)sendLoginStatus:(BOOL)isLogin {
+    if (isLogin) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kLYLoginResponseSuccessNotification object:nil];
+    }
+}
 
 + (void)routeWillJump:(NSString *)url scheme:(ZPRouteScheme *)scheme info:(NSDictionary *)info {
     if ([self.delegate respondsToSelector:@selector(routeWillJump:scheme:customInfo:)]) {

@@ -6,6 +6,7 @@
 //
 
 #import "SceneDelegate.h"
+#import "ZPURLRouteKit.h"
 
 @interface SceneDelegate ()
 
@@ -53,5 +54,14 @@
     // to restore the scene back to its current state.
 }
 
+
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts{
+    NSURL *url = URLContexts.allObjects.firstObject.URL;
+    if ([ZPRouteScheme isStandardURL:url]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self openRouteURLString:url.absoluteString parameter:nil options:nil];
+        });
+    }
+}
 
 @end

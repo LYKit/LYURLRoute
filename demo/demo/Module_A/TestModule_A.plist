@@ -24,15 +24,15 @@
 		<dict>
 			<key>web</key>
 			<dict>
+				<key>_description</key>
+				<string>跳转到公共的web页</string>
+				<key>_extend</key>
+				<string></string>
 				<key>_hold</key>
 				<dict>
 					<key>_class</key>
 					<string>TestWebKeyHold</string>
 				</dict>
-				<key>_description</key>
-				<string>跳转到公共的web页</string>
-				<key>_extend</key>
-				<string>扩展参数无</string>
 			</dict>
 		</dict>
 		<key>module_a</key>

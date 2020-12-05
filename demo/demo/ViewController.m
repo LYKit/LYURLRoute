@@ -52,6 +52,7 @@ static inline NSString* Sel(SEL sel) {
                 @{@"动态更新/添加规则":Sel(@selector(updateRouterDate))},
                 @{@"跳到web页--简单":Sel(@selector(actionNormalWeb))},
                 @{@"跳到web页--复杂":Sel(@selector(actionCustomWeb))},
+                @{@"safari等外部唤起跳转":Sel(@selector(actionOpen))},
                 ];
 }
 
@@ -156,6 +157,12 @@ static inline NSString* Sel(SEL sel) {
 // 跳转到需要参数等逻辑处理的web页
 - (void)actionCustomWeb {
     [self openRouteURLString:@"demo://mainClient/web?data={\"url\":\"https://www.baidu.com\",\"title\":\"web标题\"}" parameter:nil options:nil];
+}
+
+
+// 浏览器唤起app并跳转
+- (void)actionOpen {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"demo://module_a/home"]];
 }
 
 @end

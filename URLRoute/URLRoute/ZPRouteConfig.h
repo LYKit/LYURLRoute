@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 注册路由的scheme头名称, (必须)
-/// @param scheme scheme头
+/// @param scheme scheme头，需与app本身的URL Scheme唤起命名一致
 + (void)registerScheme:(NSString *)scheme;
 
 
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)registerExternal:(NSString *)external;
 
 
-/// 注册query中存放业务数据的key命名    (必须)
+/// 注册query中存放业务数据的key命名    (非必须)
 /// @param queryName url链接中业务data数据的key名
 + (void)registerQueryName:(NSString *)queryName;
 
@@ -71,6 +71,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param routeDictionary 规则数据
 + (void)addRouteDictionary:(NSDictionary *)routeDictionary;
 
+
+/// 登录成功时调用此函数 （未登录情况下不允许跳转，登录成功后继续执行跳转）
+/// @param isLogin 是否登录成功
++ (void)sendLoginStatus:(BOOL)isLogin;
 @end
 
 
